@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        header{
+            height: 260px;
+            width: 100%;
+            background-color: #ddd;
+        }
+        header nav{
+            padding-left: 20px;
+            padding-top: 30px;
+        }
+    header nav h1{
+        text-align: center;
+        font-size: 50px;
+        font-family: Georgia, 'Times New Roman', Times, serif ;
+        color: rgb(219, 82, 9);
+        background-color: bisque;
+    }
+    header nav ul {
+    
+        text-align: right;
+        padding-right: 20px;
+        padding-top: 100px;
+       
+    }
+    header nav ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 10px 40px;
+
+        
+    }
+    header nav ul li a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+    header nav ul li :hover{
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        padding: 15px;
+        
+    }
+
+        .about{
+            height: 100vh;
+            width: 100%;
+            background-color: #ddd
+         
+        }
+        .text{
+
+            padding-top: 15%;
+            padding-left: 50px;
+
+
+        }
+        .title h1{
+            font-size: 70px;
+            font-family: 'Gill Sans';
+            line-height: 140px;
+            cursor: pointer;
+          
+        }
+        .{
+            background-color: aquamarine;
+
+        }
+        .cal{
+            
+            color: rgb(216, 108, 14);
+            padding: 10px;
+
+        }
+        .content h2{
+            font-size: 50px;
+            color: red;
+            line-height: 100px;
+          
+        }
+        .content p{
+            font-size: 25px;
+            padding-left: 70px;
+        }
+        .event{
+            height: 428px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ddd;
+        }
+        .event-content{
+        padding-top: 10%;
+        padding-left: 50px;
+        width: 100%;
+        
+
+        }
+        .event-content h1{
+            font-size: 70px;
+            font-family: 'Gill Sans';
+            line-height: 140px;
+        }
+        .event-dates .title-events{ 
+            font-size:2rem;
+            line-height: 100px;
+            color: red;
+
+        }
+        .event-dates .para-events{
+            font-size: 30px;
+            padding-left: 70px;
+            width: 60%;
+        }
+        .outbox{
+            height: 143vh;
+            width: 100%;
+            background-color: #ddd;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        
+        .dates{
+           width: 96%;
+           display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+           justify-content: space-between;
+           gap: 3rem;
+           margin-left: 2%;
+        }
+        .dates .box {
+            position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    width: 320px;
+    padding: 11px;
+    padding-left: 20px;
+    display: block;
+    box-shadow: 1px 5px 10px #80808059;
+    border-radius: 5px;
+    background-color: #e46e72;
+            
+        }
+        .dates .box p {
+            color: #ddd;
+           
+
+
+        }
+       .dates .box:hover {
+            color: white;
+            background-color:black;
+            transition: 0.5s;
+            border-radius: 20px ;
+            box-shadow: 2px 2px 30px rgba(0,0,0,0.08);
+            
+            
+        }
+        .sem-dates{
+            height: 66vh;
+            width: 100%;
+            background-color: black;
+            position: relative;
+           
+        }
+        .left-text{
+            color: rgb(16 215 233 / 80%);
+            height: 50vh;
+            padding-top: 10%;
+            float: left;
+            width:50% ;
+            padding-left: 10px;
+           
+            
+        }
+        .left-text h2 {
+            font-size: 50px;
+
+        }
+        .left-text p{
+            font-size: 20px;
+        }
+        .right-text  {
+            
+            position: relative;
+            height: 100vh;
+            padding-top: 4%;
+            width: 30%; 
+            margin-top : 10px;
+            float: right;
+            height: 100%;
+            
+            
+
+        }
+        .right-text ul li.time{
+            list-style: none;
+            display: inline-block;
+
+        }
+        .right-text ul li .time h2{
+            color: white;
+        }
+        .right-text .time:hover{
+            color: wheat;
+            
+            transition: 0.5s;
+        }
+        .right-text .time h2:hover{
+            background-color: beige;
+            color: black;
+            width: 100%;
+            transition: 0.5s;
+            border-radius: 10px 0 0 10px;
+            padding: 5px;
+
+        }
+        .course{
+            font-size: 30px;
+            padding-left: 20px;
+
+        }
+        footer{
+
+            height: 40vh;
+            width: 100%;
+            background-color: #ddd;
+            text-align: center;
+            padding-top: 7%;
+            
+        }
+        .social h1{
+            font-size: 40px;
+            
+
+        }
+        .social p{
+            font-size: 15px;
+        }
+        .social ul li {
+            display: inline-block;
+            margin: 20px 40px;
+        }
+        .social ul li a{
+            text-decoration: none;
+            font-size: 20px;
+
+        }
+        .social ul li a:hover{
+            background-color: black;
+            color: #ddd;
+            transition: 0.5s;
+            padding: 5px;
+
+        }
+        .end{
+            height: 15vh;
+            width: 100%;
+            text-align: center;
+            background-color: black;
+        }
+        .khatam ul li{
+            display: inline-block;
+            margin-right: 40px;
+            padding-top:30px;
+            list-style: none;
+        }
+        .khatam ul li a{
+            text-decoration: none;
+            color: #ddd;
+            font-size: 20px;
+
+        }
+        .khatam ul li a:hover{
+            background-color: white;
+            color: black;
+            padding: 5px;
+            transition: 0.5s;
+
+        }
+        .khatam p{
+            color:white ;
+        }
+        .khatam ul p a{
+            text-decoration: none;
+            color: white;
+            padding: 40px;
+        }
+
+        body{
+    background-image:url(bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.calender_div{
+    height: 626px;
+    width: 100%;
+    background-color: red;
+}
+.calender{
+    margin: auto;
+    max-width: 800px;
+    font-family: serif;
+    font-weight: bold;
+    color:black;
+    background-color: red;
+    position:relative;
+    left:-23%;
+    
+}
+
+.month{
+    text-align: center;
+    background: white;
+    font-size: 80px;
+    letter-spacing: 1px;
+    color: black;
+    border: 2px solid red;
+
+}
+
+table, th , td{
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    font-size: 27px;
+    border-collapse: collapse;
+    border: 5px solid black;
+    font-family:Elaphant;
+
+
+}
+
+TR,TH,TD{
+    padding: 15px;
+
+}
+th{
+    background: #009900;
+    color: white;
+    font-family: arial;
+
+}
+td{
+    background: #00264d;
+    color:rgb(152, 26, 191);
+
+}
+td:hover{
+    background: rgb(76, 204, 244);
+    color:#fff;
+}
+.div2{
+    height: 600px;
+    width: 45%;
+    background-color: green;
+    position: relative;
+    top: -78%;
+    left: 54%;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <h1>INTERACTIVE <span class="cal">CALENDER</span> </h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#event">Important Dates</a></li>
+                <li><a href="#sem-dates">Exam Dates</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <div class=""></div>
+    <div class="calender_div">
+        <div class="calender">
+            
+            <div class="month">
+                <strong> OCTOBER</strong>
+                <strong>2022</strong>
+            </div>
+            <table>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thus</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+            </table>     </div>
+        <div class="div2">
+            <div class="calender"></div>
+        </div>
+   </div>
+      
+
+
+
+
+
+
+    <div id="about"class="about">
+        <div class="text">
+            <div class="text-section">
+
+            <div class="title">
+         <h1>About us </h1>
+</div>
+<div class=content>
+
+    <h2>Importance of Calender </h2>
+    <p>
+        Calendars are useful tools for keeping track of upcoming meetings, deadlines, and milestones. <br> 
+        Can help you visualize your schedule and remind you of important events, such as holidays and vacation time.<br>
+
+        It’s no wonder that people often have a variety of calendar tools to choose from, including everything from a paper <br>
+         calendar on their office wall to a calendar management tool, such as Calendly.<br>
+        
+        The problem is that people too often manage multiple calendars at once. <br>
+        When these calendars aren’t integrated with your work and synchronized with each other,<br> 
+        
+        this can lead to mass confusion,
+        headaches, and missed deadlines. 
+        <ul>
+            <li>Enable you to track and plan critical work manually </li>
+            <li>Automatically track specific work for projects, teams, or folders</li>
+            <li> you can view calendars by month, quarter, and/or year</li>
+           
+
+        </ul>
+    </p></div>
+</div>
+</div>
+</div>
+
+<div id="event" class="event">
+    <div class="event-content">
+        <div class="event-title">
+            <h1>Important Dates </h1>
+        </div>
+        <div class="event-dates">
+            <h2 class="title-events" >Dates to Remember :-</h2>
+            <p class="para-events">  <br> </p>
+       
+         </div>
+        </div>
+
+    
+    </div>
+</div>
+<!--DATES-->
+<div class="outbox">
+<div class="dates">
+    <div class="box">
+        <h2>1:- December</h2>
+        <h3>World Aids Day</h3>
+        <p>World Aids Day, designated on 1 December every year since 1988, is an international day        dedicated to raising awareness of the AIDS pandemic caused by the spread of HIV infection and mourning those who have died of the disease.</p>
+    </div>
+    <div class="box">
+        <h2>2:- December</h2>
+        <h3>World Computer literacy day
+            International day of abolition of slavery</h3>
+        <p>December 2nd is World Computer Literacy Day. Although computers are omnipresent in our daily lives, we must be reminded that computer accessibility is still an important topic for those struggling with innovation.</p>
+    </div>
+    <div class="box">
+        <h2>3:- December</h2>
+        <h3>International Day of People with disabilities
+            World conservation day</h3>
+        <p>The annual observance of the International Day of Disabled Persons was proclaimed in 1992, by the United Nations General Assembly resolution 47/3. The observance of the Day aims to promote an understanding of disability issues and mobilize support for the dignity, rights and well-being of persons with disabilities.</p>
+    </div>
+  
+    
+    <div class="box">
+        <h2>4:- December</h2>
+        <h3>Navy Day</h3>
+        <p>Navy Day in India is celebrated on 4 December every year to recognize the achievements and role of the Indian Navy to the country. 4 December was chosen as on that day in 1971, during Operation Trident, the Indian Navy sank four Pakistani vessels including PNS Khaibar, killing hundreds of Pakistani Navy personnel.</p>
+    </div>
+    
+    
+    <div class="box">
+        <h2>7:- December</h2>
+        <h3>Armed Forces Flag Day
+            International civil aviation day</h3>
+        <p>Annually, on December 7th, is commemorated as Armed Forces Flag Day. Since 1949, the country has celebrated December 7 as Armed Forces Flag Day to remember the martyrs and the men and women in military who bravely defended .</p>
+    </div>
+    <div class="box">
+        <h2>9:- December</h2>
+        <h3>The International day against corruption</h3>
+        <p>The Assembly also designated 9 December as International Anti-Corruption Day, to raise awareness of corruption and of the role of the Convention in combating and preventing it. The Convention entered into force in December 2005.</p>
+    </div>
+    <div class="box">
+        <h2>10:- December</h2>
+        <h3>Human Rights Day</h3>
+        <p>Human Rights Day is celebrated annually around the world on 10 December every year.
+
+            The date was chosen to honor the United Nations General Assembly's adoption and proclamation, on 10 December 1948, of the Universal Declaration of Human Rights (UDHR), the first global enunciation of human rights and one of the first major achievements of the new United Nations. </p>
+    </div>
+    <div class="box">
+        <h2>19:- December</h2>
+        <h3>Goa’s liberation day</h3>
+        <p>The 19th of December each year is designated as Goa's Liberation Day. The liberation of Goa from Portuguese domination by the Indian Armed Forces and the ultimate independence of the Indian subcontinent are commemorated on December 19. It is one of the most important days in the history of Goa and is also regarded as a forgotten fight of freedom.</p>
+    </div>
+
+    <div class="box">
+        <h2> 20:- December</h2>
+        <h3>International Human solidarity</h3>
+        <p>International solidarity is the expression of a spirit of unity among individuals, peoples, States and international organizations. It encompasses the union of interests, purposes and actions and the recognition of different needs and rights to achieve common goals.</p>
+
+    </div>
+
+    <div class="box">
+        <h2>23:- December</h2>
+        <h3> Kisan Diwas ( Farmer's Day )</h3>
+        <p>To commemorate the birth anniversary of former prime minister and farmer leader Chaudhary Charan Singh, Kisan Diwas, or National Farmers' Day, is observed. The purpose of the holiday is to show our appreciation for the farmers who are the foundation of the nation's economy.</p>
+    </div>
+
+    <div class="box">
+        <h2>25:- December </h2>
+        <h3> Christmas Day</h3>
+        <p>Every year on December 25, people commemorate the birth of Jesus Christ during Christmas. The majority of Christians celebrate it. Jesus' conception was dated by the Roman Christian historian Sextus Julius Africanus to March 25, which, nine months later, is December 25. It is observed by the Christian community on a global scale.</p>
+    </div>
+
+    <div class="box">
+        <h2>29:- December</h2>
+        <h3>International Bio-diversity Day</h3>
+        <p>The ninth day of December each year is designated as International Biodiversity Day. The UN General Assembly designated May 22 as International Day of Biological Diversity (IDB) in December 2000 to mark the adoption of the Convention's text by the Nairobi Final Act of the Conference for the Adoption of the Agreed Text of the Convention on Biological Diversity on May 22, 1992. With the theme "We're part of the solution for nature," it was observed in 2021.</p>
+    </div>
+   
+    
+    
+
+   
+
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<!--sem dates-->
+ 
+<div id="sem-dates" class="sem-dates">
+    <div class="left-text">
+        <div class="left-content">
+            <h2>Exam Dates</h2>
+            <p>.</p>
+
+        </div>
+
+    </div>
+    <div class="right-text">
+        <ul>
+            <li>
+        <div class="time">
+
+            <h2>19 <br>December</h2>
+            <div class="course"> <p>Mechanical <br> course code 135 </p></div>
+        
+           
+          
+        </li>
+        <li>
+            <div class="time">
+    
+                <h2>21 <br><span>march</span></h2>
+                <div class="course"> <p>Math <br> course code 110 </p></div>
+            </li>
+            <li>
+                <div class="time">
+        
+                    <h2>24 <br><span>march</span></h2>
+                   <div class="course"> <p>Physics <br> course code 174 </p></div>
+                </li>
+        </ul>
+          
+
+
+    </div>
+</div>
+<!--footer-->
+<footer>
+  <h1>foolish developer</h1>
+  <p>Lorem ipsum dolor sit amet consectetur 
+    adipisicing elit. Voluptatibus molestiae
+     impedit beatae odit aut unde libero eum  
+    similique aut libero recusandae itaque rerum.</p>
+   <div class="social"> <ul>
+    <li><a href="www.linkedin.com/in/sanjeev00121" target="_blank">linkedin</a></li>
+    <li><a href="https://github.com/sanjeev212020 " target="_blank">GitHub</a></a></li>
+    <li><a href="https://Internshala.com" target="_blank">Internshala</a></li>
+
+    </ul></div>
+</footer>
+<div class="end">
+    <div class="khatam">
+        <main>
+            <section> 
+                <a href="https://google.com" target="_blank">open google</a>
+                <br>
+                <a href="https://facebook.com" target="_blank">open facebook</a>
+                <br>
+                <a href="https://wikipedia.com" target="_blank">open wikipedia</a>
+                <br>
+                <a href="" target="_blank"> </a>
+            </section>
+        </main>
+  
+</div>
+
+
+</div>
+
+</body>
+</html>
